@@ -1,0 +1,21 @@
+{
+    "name": "aiya-zhao/php-jwt",
+    "description": "这是一个php的jwt封装",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AiyaZhao\\Jwt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aiya-zhao",
+            "email": "446914128@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=7.4"
+    }
+}
