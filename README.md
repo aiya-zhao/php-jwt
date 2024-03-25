@@ -25,12 +25,12 @@ $config_admin = [
 ];
 
 $token_api = JWT::config($config_api)->setSub(123)->getToken();  // 获取token
-echo $token;  // 输出token
+echo $token_api;  // 输出token
 $head_arr = JWT::getHead();  // 获取头信息
 $body_arr = JWT::getBody();  // 获取载荷信息
-$jwt = JWT::parseToekn($token);   // 解析token信息
+$jwt = JWT::parseToekn($token_api);   // 解析token信息
 $head_arr = $jwt->getHead(); // 获取解析token的头信息
-$check_token = JWT::checkToken($token); // 验证token有效期
+$check_token = JWT::checkToken($token_api); // 验证token有效期
 $token_admin = "xxx.xxx.xxx"; // 后台token
 $jwt_admin = JWT::config($config_admin)->parseToekn($token_admin);   // 解析后台接口token信息
 $head_arr_admin = JWT::getHead();  // 获取头信息

@@ -34,7 +34,7 @@ class JwtContent{
     private $jti;
 
     // 自定义字段
-    private Array $foo;
+    private Array $foo = [];
 
     // 过期时间 单位：分钟
     private $ttl = 120;

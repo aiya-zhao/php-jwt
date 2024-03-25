@@ -36,18 +36,25 @@ class JWT
      *      'alg'            => 'sha256'       // 签名算法
      *   ]
      */
-    public static Array $config;
+    public static Array $config = [];
+    
+    // jwt_content单例
+    private static $jwt_content = null;
 
     /**
      * @param Array $config
      * @return JwtContent
      */
     public static function config(Array $config) {
+        if(static::$config == $config && !empty($config) && static::$jwt_content){
+            return static::$jwt_content;
+        }
         static::$config = $config;
         if (empty($config)) {
             throw new Exception("jwt配置不存在");
         }
-        return new JwtContent($config);
+        static::$jwt_content = new JwtContent($config);
+        return static::$jwt_content;
     }
 
     /**
