@@ -1,11 +1,11 @@
 ## 要求
 - PHP >= 7.4
 ## 安装
-~~~ 
+~~~ composer
 composer require aiya-zhao/php-jwt
 ~~~
 ## 用法
-~~~
+~~~ php
 use AiyaZhao\Jwt\JWT;
 
 // 前端接口token验证配置
